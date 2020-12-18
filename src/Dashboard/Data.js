@@ -54,4 +54,31 @@ export const tableRows = months.map((month, i) => ({
     tablets: format(chartData[3].data[i]),
 }));
 
-console.log(tableRows)
+export const tableColumns = [
+    {
+        width: 240,
+        label: 'Month',
+        dataKey: 'month',
+        numeric: true
+    }, {
+        width: 240,
+        label: 'Phones',
+        dataKey: 'phones',
+        numeric: true
+    }, {
+        width: 240,
+        label: 'Services',
+        dataKey: 'services',
+        numeric: true
+    }, {
+        width: 240,
+        label: 'Laptops',
+        dataKey: 'laptops',
+        numeric: true
+    }, {
+        width: 240,
+        label: 'Tablets',
+        dataKey: 'tablets',
+        numeric: true
+    }
+  ]
