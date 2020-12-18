@@ -1,11 +1,16 @@
 import React from 'react';
 import {Brand} from "./Brand"
 import {Container} from "./Container";
+import {GlobalStyle} from "./GlobalStyle";
 
 export function Dashboard(){
     return (
-    <Container>
-        <Brand/>
-    </Container>
+        <>
+            <GlobalStyle/>
+            <Container>
+                <Brand/>
+                <p> Normal Text </p>
+            </Container>
+        </>
     );
 }
