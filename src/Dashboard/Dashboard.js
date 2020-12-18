@@ -2,6 +2,7 @@ import React from 'react';
 import {Brand} from "./Brand"
 import {Container} from "./Container";
 import {GlobalStyle} from "./GlobalStyle";
+import {Card} from "./Card"
 
 export function Dashboard(){
     return (
@@ -9,7 +10,12 @@ export function Dashboard(){
             <GlobalStyle/>
             <Container>
                 <Brand/>
-                <p> Normal Text </p>
+                <Card height={400}>
+                    Chart goes here.
+                </Card>
+                <Card height={400}>
+                    Table goes here.
+                </Card>
             </Container>
         </>
     );
