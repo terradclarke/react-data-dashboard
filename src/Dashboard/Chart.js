@@ -7,18 +7,35 @@ import HighchartsReact from 'highcharts-react-official'
 const options = {
     chart: {
         height: '360px',
-        type: 'column'
+        type: 'column',
+        style: {
+            fontFamily: `'Frank Ruhl Libre', serif`,
+        }
     },
     title: {
-        text: 'Stacked column chart'
+        text: 'Revenue by Product'
     },
     xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        categories: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+        ]
     },
     yAxis: {
         min: 0,
+        reversedStacks: false,
         title: {
-            text: 'Total fruit consumption'
+            text: 'Billions of Dollars'
         },
         stackLabels: {
             enabled: true,
@@ -48,6 +65,9 @@ const options = {
         pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
     },
     plotOptions: {
+        series: {
+            borderWidth: 0
+        },
         column: {
             stacking: 'normal',
             dataLabels: {
@@ -56,14 +76,21 @@ const options = {
         }
     },
     series: [{
-        name: 'John',
-        data: [5, 3, 4, 7, 2]
+        name: 'Phones',
+        data: [5, 3, 4, 7, 2],
+        color: '#149947'
     }, {
-        name: 'Jane',
-        data: [2, 2, 3, 2, 1]
+        name: 'Services',
+        data: [2, 2, 3, 2, 1],
+        color: '#1dda65'
     }, {
-        name: 'Joe',
-        data: [3, 4, 4, 2, 5]
+        name: 'Laptops',
+        data: [3, 4, 4, 2, 5],
+        color: '#5CF396'
+    }, {
+        name: 'Tablets',
+        data: [3, 4, 4, 2, 5],
+        color: '#C1F8D7'
     }]
 }
 
